@@ -13,6 +13,11 @@ gem 'jquery-rails'
 
 gem 'jbuilder', '~> 2.0'
 
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'cancan'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
