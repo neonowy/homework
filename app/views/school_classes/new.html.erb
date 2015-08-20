@@ -1,2 +1,19 @@
-<h1>SchoolClasses#new</h1>
-<p>Find me in app/views/school_classes/new.html.erb</p>
+<main class="main main-form">
+  <h1>New Class</h1>
+
+  <%= form_for @school_class, url: school_classes_path do |f| %>
+    <p>
+      <%= f.label :grade %>
+      <%= f.number_field :grade, placeholder: '1' %>
+    </p>
+
+    <p>
+      <%= f.label :letter %>
+      <%= f.text_field :letter, placeholder: 'A' %>
+    </p>
+
+    <p>
+      <%= f.submit 'Create' %>
+    </p>
+  <% end %>
+</main>

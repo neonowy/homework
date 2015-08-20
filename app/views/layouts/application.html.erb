@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Homework</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Homework</title>
 
-<div class="notice">
-    <%= notice %>
-</div>
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-<div class="alert">
-    <%= alert %>
-</div>
+    <!-- Stylesheets -->
+    <%= stylesheet_link_tag 'application', media: 'all' %>
 
-<%= yield %>
+    <!-- Scripts -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-</body>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+  <main class="content">
+
+  <header class="main-header">
+    <ul class="main-menu">
+      <li><%= link_to 'Homework', root_path %></li>
+    </ul>
+
+    <div class="notice"><%= notice %></div>
+
+    <div class="alert"><%= alert %></div>
+  </header>
+
+  <%= yield %>
+
+  <footer class="main-footer">
+    <p>&copy; <%= Time.new.year %> Krzysztof Zbudniewek</p>
+  </footer>
+
+  </main>
+
+  </body>
 </html>
